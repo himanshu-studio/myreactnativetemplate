@@ -1,0 +1,8 @@
+{
+  "name": "sgreactnativetemplate",
+  "version": "1.0.0",
+  "description": "React Native Template",
+  "repository": "git@github.com:studiographene/reactnativeboilerplate",
+  "author": "Himanshu Yadav",
+  "license": "MIT"
+}
