@@ -1,4 +1,4 @@
-package com.reactnativeboilerplate.newarchitecture;
+package com.sgreactnativeboilerplate.newarchitecture;
 
 import android.app.Application;
 import androidx.annotation.NonNull;
@@ -16,12 +16,12 @@ import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.UIManager;
 import com.facebook.react.fabric.ComponentFactory;
 import com.facebook.react.fabric.CoreComponentsRegistry;
-import com.facebook.react.fabric.EmptyReactNativeConfig;
 import com.facebook.react.fabric.FabricJSIModuleProvider;
+import com.facebook.react.fabric.ReactNativeConfig;
 import com.facebook.react.uimanager.ViewManagerRegistry;
-import com.reactnativeboilerplate.BuildConfig;
-import com.reactnativeboilerplate.newarchitecture.components.MainComponentsRegistry;
-import com.reactnativeboilerplate.newarchitecture.modules.MainApplicationTurboModuleManagerDelegate;
+import com.sgreactnativeboilerplate.BuildConfig;
+import com.sgreactnativeboilerplate.newarchitecture.components.MainComponentsRegistry;
+import com.sgreactnativeboilerplate.newarchitecture.modules.MainApplicationTurboModuleManagerDelegate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -105,7 +105,7 @@ public class MainApplicationReactNativeHost extends ReactNativeHost {
                 return new FabricJSIModuleProvider(
                     reactApplicationContext,
                     componentFactory,
-                    new EmptyReactNativeConfig(),
+                    ReactNativeConfig.DEFAULT_CONFIG,
                     viewManagerRegistry);
               }
             });
