@@ -2,7 +2,7 @@
  * @author Rahul Rajput
  * @email rahul@studiographene.com
  * @create date 2020-05-06 09:52:09
- * @modify date 2022-11-25 11:01:49
+ * @modify date 2022-11-25 11:02:14
  * @desc [Registration screen]
  */
 /* eslint-disable no-return-assign */
@@ -10,33 +10,35 @@
 
 import React, {useCallback} from 'react';
 import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
-import {useDispatch} from 'react-redux';
 import SGHeader from '../../components/SGHeader';
+import {useDispatch} from 'react-redux';
 import WrappedComponent from '../../components/WrapperComponent';
-import {saveRegisterScreenData} from '../../redux/user/Action';
+import {saveScreen3Data} from '../../redux/user/Action';
 import {ScreenNames} from '../../constants/Constants';
 import {Texts} from '../../constants/Strings';
 
-const Register = props => {
+const Screen3 = props => {
   const dispatch = useDispatch();
   const moveToNextScreen = useCallback(() => {
     //Using dummy data to save
-    const registerData = {
-      firstName: 'First',
-      lastName: 'Last',
-      mobileNo: '9998887771'
+    const screen3Data = {
+      key1: 10,
+      key2: 20,
+      key3: {
+        key4: 'abc'
+      }
     }
-    dispatch(saveRegisterScreenData(registerData))
-    props.navigation.navigate(ScreenNames.Screen3);
+    dispatch(saveScreen3Data(screen3Data))
+    props.navigation.navigate(ScreenNames.FinalScreen);
   }, []);
   return (
     <>
       <SGHeader title={Texts.register} />
       <View style={styles.container}>
-        <Text>Register screen</Text>
+        <Text>Screen 3</Text>
         <TouchableOpacity
           onPress={moveToNextScreen}>
-          <Text>Move to Next</Text>
+          <Text>Go to FinalScreen</Text>
         </TouchableOpacity>
       </View>
     </>
@@ -51,4 +53,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default WrappedComponent(Register);
+export default WrappedComponent(Screen3);

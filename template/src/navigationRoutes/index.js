@@ -2,7 +2,7 @@
  * @author Himanshu Yadav
  * @email himanshu.yadav@studiographene.com
  * @create date 2022-06-23 18:50:49
- * @modify date 2022-07-22 12:19:39
+ * @modify date 2022-11-25 10:53:10
  * @desc Main file which contains navigators(Stack and Bottom Tabs) created using react-navigation v6.
  */
 
@@ -23,7 +23,8 @@ import Discovery from '../screenModules/discovery/Discovery';
 import Profile from '../screenModules/profile/Profile';
 import LoginScreen from '../screenModules/login/Login';
 import RegisterScreen from '../screenModules/login/Register';
-import Splash from '../screenModules/splash/Splash';
+import Screen3 from '../screenModules/login/Screen3';
+import FinalScreen from '../screenModules/login/FinalScreen';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -45,6 +46,14 @@ const MainStack = () => {
       <Stack.Screen
         name={ScreenNames.RegisterScreen}
         component={RegisterScreen}
+      />
+      <Stack.Screen
+        name={ScreenNames.Screen3}
+        component={Screen3}
+      />
+      <Stack.Screen
+        name={ScreenNames.FinalScreen}
+        component={FinalScreen}
       />
     </Stack.Navigator>
   );

@@ -2,7 +2,7 @@
  * @author Rahul Rajput
  * @email rahul@studiographene.com
  * @create date 2020-05-06 09:51:53
- * @modify date 2022-07-22 13:09:16
+ * @modify date 2022-11-25 10:40:45
  * @desc [Define all your constants here]
  */
 
@@ -19,6 +19,8 @@ export const ScreenNames = {
   SplashScreen: 'SplashScreen',
   MyTabs: 'MyTabs',
   MyStack: 'MyStack',
+  Screen3: 'Screen3',
+  FinalScreen: 'FinalScreen',
 };
 
 export const Colors = {
